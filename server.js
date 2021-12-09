@@ -17,7 +17,7 @@ var array_json = {}
 var json_for_send = []
 
 //MQTT------------------------------------------------------ |-> process.env.MQTT_URL_CON
-var client = mqtt.connect(process.env.MQTT_BROKER_CON)//('mqtt://broker.hivemq.com')//('mqtt://broker.mqtt-dashboard.com') ->
+var client = mqtt.connect(process.env.BROKER_CON)//('mqtt://broker.hivemq.com')//('mqtt://broker.mqtt-dashboard.com') ->
 var topic = process.env.MQTT_URL_CON //'pub_do_esp8266_ifal_ca'-------->topico de publicação
 
 client.on('message', (topic, message)=>{
