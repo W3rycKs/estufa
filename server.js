@@ -10,6 +10,7 @@ app.use(express.urlencoded())
 app.use(express.static(__dirname))
 
 var porta = process.env.PORT || 8080 //--> porta
+var broker_url = process.env.BROKER_CON
 
 var data;
 var valor = 0
@@ -17,7 +18,7 @@ var array_json = {}
 var json_for_send = []
 
 //MQTT------------------------------------------------------ |-> process.env.MQTT_URL_CON
-var client = mqtt.connect(process.env.BROKER_CON)//('mqtt://broker.hivemq.com')//('mqtt://broker.mqtt-dashboard.com') ->
+var client = mqtt.connect(broker_url)//('mqtt://broker.hivemq.com')//('mqtt://broker.mqtt-dashboard.com') ->
 var topic = process.env.MQTT_URL_CON //'pub_do_esp8266_ifal_ca'-------->topico de publicação
 
 client.on('message', (topic, message)=>{
