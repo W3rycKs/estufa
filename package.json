@@ -1,0 +1,10 @@
+{
+  "name": "estufa_projet",
+  "version": "1.0.0",
+  "description": "estufa automatizada backend",
+  "dependencies": {
+    "express": "latest",
+    "mqtt": "latest",
+    "mongoose": "latest"
+}
+}
