@@ -268,7 +268,7 @@ function umida() {
             	if (obj!=null) {
             		if (obj.code==localStorage.getItem("esp8266_code")) {
             			if (antiloop==0) {
-            				umidade.innerHTML = obj.umidade_ar.toFixed(2) + "°C"; antiloop = 1;
+            				umidade.innerHTML = obj.umidade_ar.toFixed(2) + "%"; antiloop = 1;
             			}
             		}
             	}
@@ -297,7 +297,7 @@ function umidasolo() {
             	if (obj!=null) {
             		if (obj.code==localStorage.getItem("esp8266_code")) {
             			if (antiloop==0) {
-            				umidade_solo.innerHTML = obj.umidade_solo.toFixed(2) + "°C"; antiloop = 1;
+            				umidade_solo.innerHTML = obj.umidade_solo.toFixed(2) + "%"; antiloop = 1;
             			}
             		}
             	}
