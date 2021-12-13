@@ -66,10 +66,10 @@ function find_bank(obj) {
 	data.find((err,document)=> {
 		//console.log(document)
 		array_json = document;
-		if (array_json.length<50) {json_for_send = array_json}
+		if (array_json.length<30) {json_for_send = array_json}
 		else {
-		for (var n1=array_json.length; n1>=array_json.length-50; --n1) {json_for_send.push(array_json[n1])}//>ultimas 20 mensagens
-		if (json_for_send.length>=100) {for (var n1=0; n1<=50; ++n1) {json_for_send.shift()}}	
+		for (var n1=array_json.length; n1>=array_json.length-30; --n1) {json_for_send.push(array_json[n1])}//>ultimas 20 mensagens
+		if (json_for_send.length>=60) {for (var n1=0; n1<=30; ++n1) {json_for_send.shift()}}	
 		if (array_json.length>=128000) { //----> caso ultrapasse os 512Mb da versão gratuita (numero de mensagens salvas)
 			data.deleteMany((err,result)=>{
 				if(err) {console.log(err)}
