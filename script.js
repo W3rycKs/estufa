@@ -161,7 +161,7 @@ function renderizartelademonitoramento(codigo) {
 
 		setInterval(()=>{umidasolo(); //verificar umidade do solo
 			contador_umidade++;
-			if (contador_umidade>=1200) {
+			if (contador_umidade>=1200 && parseFloat(umidade_solo.innerText)<=50.0) {
 				alert("Umidade do solo baixa. Verifique a mangueira ou o estoque de água"); 
 				contador_umidade = 0;
 			}
