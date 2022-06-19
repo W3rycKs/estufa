@@ -369,7 +369,7 @@ function desenhar_temperatura(array) {
 	valor = obj.temp
 	ctx.strokeStyle = "#cc3131";
 	var aleatorio = Math.random()
-	ctx.lineTo(x, altura-(valor*aleatorio));
+	ctx.lineTo(x, altura+(valor*aleatorio));
 	ctx.stroke();
 	ctx.fillStyle = "white";
 	ctx.fillRect(0, 0, largura, 30);
