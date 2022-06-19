@@ -419,7 +419,7 @@ function desenhar_umidade(array) {
 	valor = obj.umidade_solo
 	ctx.strokeStyle = "#631d1d";
 	//var aleatorio = Math.random()+2
-	ctx.lineTo(x, altura-(valor+30));
+	ctx.lineTo(x, altura-(valor*valor/10));
 	ctx.stroke();
 	ctx.fillStyle = "white";
 	ctx.fillRect(0, 0, largura, 30);
