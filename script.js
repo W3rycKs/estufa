@@ -368,8 +368,8 @@ function desenhar_temperatura(array) {
 	media+=obj.temp
 	valor = obj.temp
 	ctx.strokeStyle = "#cc3131";
-	var aleatorio = Math.random()*2;
-    ctx.lineTo(x, altura-(valor*aleatorio)); //definir desnivel
+	//var aleatorio = Math.random()*2;
+     	ctx.lineTo(x, altura-(valor*10*valor/6));
 	ctx.stroke();
 	ctx.fillStyle = "white";
 	ctx.fillRect(0, 0, largura, 30);
