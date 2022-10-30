@@ -20,7 +20,7 @@ var usuarios = []
 
 
 //start_banco-----------------------------------------------
-var url_m = "mongodb+srv://user:nK9vYw5fkor7O8mg@cluster0.bcsyl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"//process.env.MONGODB_URI
+var url_m = "mongodb+srv://user:S02c4b1L1LACdBRD@cluster0.bcsyl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"//process.env.MONGODB_URI
 
 mongoose.connect(url_m) 
 
