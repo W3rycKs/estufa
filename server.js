@@ -20,7 +20,7 @@ var usuarios = []
 
 
 //start_banco-----------------------------------------------
-var url_m = "mongodb+srv://user:S02c4b1L1LACdBRD@cluster0.bcsyl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"//process.env.MONGODB_URI
+var url_m = "mongodb+srv://user:S02c4b1L1LACdBRD@cluster0.bcsyl.mongodb.net/?retryWrites=true&w=majority"//process.env.MONGODB_URI
 
 mongoose.connect(url_m) 
 
@@ -46,7 +46,7 @@ const usuario = mongoose.model('users', esp8266_users); //-----> nome do banco
 
 //MQTT------------------------------------------------------ |-> process.env.MQTT_URL_CON
 var client = mqtt.connect("mqtt://broker.mqtt-dashboard.com")//('mqtt://broker.hivemq.com')//('mqtt://broker.mqtt-dashboard.com') ->
-var topic = "pub_do_esp8266_ifal_ca"//process.env.MQTT_URL_CON //'pub_do_esp8266_ifal_ca'-------->topico de publicação
+var topic = "pub_do_esp8266_ifal_ca"//process.env.MQTT_URL_CON //'pub_do_esp8266_ifal_ca'-------->topico de publicação //S02c4b1L1LACdBRD
 
 client.on('message', (topic, message)=>{
 	message = message.toString()
