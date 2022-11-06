@@ -85,7 +85,7 @@ function find_bank(obj) {
 app.post("/post", function(req,res) {
 	var codigo = JSON.stringify(req.body).substring(14, 20)
 	console.log(codigo)
-	find(codigo)
+	//find(codigo)
 	res.json({"status":"ok"})
 })
 
