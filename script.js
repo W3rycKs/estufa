@@ -369,7 +369,7 @@ function desenhar_temperatura(array) {
 	valor = obj.temp
 	ctx.strokeStyle = "#cc3131";
 	//var aleatorio = Math.random()+2
-	ctx.lineTo(x, altura-(valor*valor*Math.random()/100));
+	ctx.lineTo(x, altura-(valor*valor/100));
 	ctx.stroke();
 	ctx.fillStyle = "white";
 	ctx.fillRect(0, 0, largura, 30);
@@ -419,7 +419,7 @@ function desenhar_umidade(array) {
 	valor = obj.umidade_solo
 	ctx.strokeStyle = "#631d1d";
 	//var aleatorio = Math.random()+2
-	ctx.lineTo(x, altura-(valor*valor*Math.random()/100));
+	ctx.lineTo(x, altura-(valor*valor/100));
 	ctx.stroke();
 	ctx.fillStyle = "white";
 	ctx.fillRect(0, 0, largura, 30);
